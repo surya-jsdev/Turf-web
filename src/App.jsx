@@ -18,7 +18,7 @@ const Navbar = ({ user, onLogout }) => {
     }}>
       <div className="container" style={{ height: '70px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <Link to="/" style={{ fontSize: '1.5rem', fontWeight: '700', color: 'white', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <span className="text-primary">TURF</span>BOOK
+          <span className="text-primary">ROGER</span>ACADEMY
         </Link>
 
         {user ? (
@@ -31,7 +31,10 @@ const Navbar = ({ user, onLogout }) => {
             </button>
           </div>
         ) : (
-          <Link to="/login" className="btn btn-primary">Login</Link>
+          <div style={{ display: 'flex', gap: '1rem' }}>
+            <Link to="/signup" className="btn btn-secondary" style={{ padding: '0.5rem 1rem' }}>Sign Up</Link>
+            <Link to="/login" className="btn btn-primary">Login</Link>
+          </div>
         )}
       </div>
     </nav>
